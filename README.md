@@ -20,9 +20,9 @@
 ```mermaid
 flowchart LR
     TRAIN["학습 3,087장<br/>후보 가중치 학습"]
-    VAL["검증 14장 · 90조건<br/>가중치·추론 크기·임계값 선택"]
-    FIX["선택 조건 고정<br/>가중치·설정·임계값 저장"]
-    TEST["테스트 16장<br/>Mask AP · 영상 단위 F1"]
+    VAL["검증 14장<br/>90조건 비교·선택"]
+    FIX["선택 조건 고정<br/>가중치·설정 저장"]
+    TEST["테스트 16장<br/>분할·영상 판정 평가"]
     TRAIN --> VAL --> FIX --> TEST
 ```
 
@@ -150,18 +150,18 @@ flowchart LR
     COCO["COCO 사전학습<br/>YOLOv8s-Seg"]
     BASE["기초 · 960 학습<br/>26에폭 가중치"]
     A["A · 960 추가 학습"]
-    B["B · 1280 추가 학습<br/>7에폭 가중치"]
-    C["C · 원본당 최대 1장"]
-    D["D · 원본당 최대 4장"]
-    E["E · COCO 초기화<br/>원본당 최대 4장"]
-    F["F · 수동 주석 증강 138장"]
-    G["G · 전체 자료 · 960<br/>97에폭 가중치"]
+    B["B · 입력 1280<br/>7에폭 가중치"]
+    C["C · 원본당<br/>최대 1장"]
+    D["D · 원본당<br/>최대 4장"]
+    E["E · COCO 시작<br/>원본당 최대 4장"]
+    F["F · 수동 주석<br/>증강 138장"]
+    G["G · 입력 960<br/>97에폭 가중치"]
     H["H · 추가 미세조정"]
-    I["I · 클래스·원본 균등 추출"]
-    J["J · 온라인 증강 완화"]
-    K["K · BatchNorm 통계 고정"]
-    L["L · 분류 손실 가중치 1.0"]
-    M["M · 전체 자료 · 1280"]
+    I["I · 클래스·원본<br/>균등 추출"]
+    J["J · 온라인 증강<br/>강도 완화"]
+    K["K · BatchNorm<br/>통계 고정"]
+    L["L · 분류 손실<br/>가중치 1.0"]
+    M["M · 전체 자료<br/>입력 1280"]
 
     COCO --> BASE
     COCO --> E
@@ -226,7 +226,7 @@ M은 100에폭을 모두 수행했고, 학습 중 최고 Mask mAP50–95는 47�
 정답 영역을 G, 예측 영역을 P라고 하면 IoU는 두 영역의 교집합을 합집합으로 나눈 값이다.
 
 $$
-\operatorname{IoU}(G,P)=\frac{|G\cap P|}{|G\cup P|}
+\mathrm{IoU}(G,P)=\frac{|G\cap P|}{|G\cup P|}
 $$
 
 예측이 정상 표면까지 넓어지면 합집합이 커지고, 결함 일부를 놓치면 교집합이 줄어든다. 두 경우 모두 IoU가 낮아진다. 정답과 예측의 크기가 같아도 위치가 어긋나면 점수가 감소한다.
@@ -264,8 +264,8 @@ $$
 | TN | OFF | OFF | 해당 클래스 정답이 없는 영상을 제외 |
 
 $$
-\operatorname{Precision}=\frac{TP}{TP+FP},\qquad
-\operatorname{Recall}=\frac{TP}{TP+FN},\qquad
+\mathrm{Precision}=\frac{TP}{TP+FP},\qquad
+\mathrm{Recall}=\frac{TP}{TP+FN},\qquad
 F1=\frac{2TP}{2TP+FP+FN}
 $$
 
