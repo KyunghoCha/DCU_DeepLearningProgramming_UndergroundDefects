@@ -22,7 +22,7 @@ flowchart LR
     TRAIN["학습 3,087장<br/>후보 가중치 학습"]
     VAL["검증 14장<br/>90조건 비교·선택"]
     FIX["선택 조건 고정<br/>가중치·설정 저장"]
-    TEST["테스트 16장<br/>분할·영상 판정 평가"]
+    TEST["테스트 16장<br/>Mask AP · F1"]
     TRAIN --> VAL --> FIX --> TEST
 ```
 
