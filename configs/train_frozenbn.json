@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "ultralytics_version": "8.4.12",
+  "classes": [
+    "crack",
+    "efflorescence",
+    "spall_detach"
+  ],
+  "seed": 42,
+  "baseline": {
+    "weights_sha256": "5d9cd8ed82bd1b2af4b5341192b5503e5793a5b11eadbd4ad157cb368aecf438",
+    "split_manifest_sha256": "15410276691ed560bc9fdaba65ba107b8f8834e69abbb96b0c9056f9e914f774",
+    "expected_counts": {
+      "train": 3087,
+      "val": 14,
+      "test": 16
+    }
+  },
+  "params": {
+    "epochs": 30,
+    "patience": 30,
+    "imgsz": 960,
+    "batch": 4,
+    "optimizer": "AdamW",
+    "lr0": 1.5e-05,
+    "warmup_bias_lr": 1.5e-05,
+    "warmup_epochs": 1.0,
+    "lrf": 0.1,
+    "cos_lr": false,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "translate": 0.1,
+    "scale": 0.5,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "degrees": 0.0,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "device": 0,
+    "workers": 0,
+    "cache": false,
+    "amp": true,
+    "deterministic": true,
+    "seed": 42,
+    "save": true,
+    "save_period": 1,
+    "plots": true,
+    "verbose": false,
+    "resume": false,
+    "mask_ratio": 2
+  },
+  "initialization": "previous_best",
+  "checkpoint_metric": "mask_map50_95",
+  "sampling": "uniform",
+  "bn_stats": "frozen"
+}

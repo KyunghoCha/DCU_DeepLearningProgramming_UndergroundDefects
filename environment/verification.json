@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-17T12:46:47.270896+00:00",
+  "environment": "environment/recorded.json",
+  "inputs": "environment/reproduction_inputs.json",
+  "weights_sha256": "2ac5db0b8ca60f166339eadcf511aad1c49aea91b9ad8ee9086af3db2dc8575e",
+  "data_counts": {
+    "train": 3087,
+    "val": 14,
+    "test": 16
+  },
+  "normalized_labels_identical": 3117,
+  "state_tensors_identical": 417,
+  "same_gpu_reproduction": {
+    "tune": {
+      "images": 14,
+      "raw_instances_box_polygons_and_confidence_exact": true,
+      "ground_truth_and_image_label_hashes_exact": true,
+      "thresholds": {
+        "crack": 0.001,
+        "efflorescence": 0.01,
+        "spall_detach": 0.001
+      },
+      "macro_f1": 0.8518518518518517,
+      "mask": {
+        "overall": {
+          "precision": 0.8673807335610929,
+          "recall": 0.6015155263948646,
+          "map50": 0.7093719047619048,
+          "map50_95": 0.24478481096681098
+        },
+        "per_class": {
+          "crack": {
+            "precision": 0.8393781779811536,
+            "recall": 0.5,
+            "map50": 0.6224999999999999,
+            "map50_95": 0.21225
+          },
+          "efflorescence": {
+            "precision": 1.0,
+            "recall": 0.6378799125179273,
+            "map50": 0.7262,
+            "map50_95": 0.2458829090909091
+          },
+          "spall_detach": {
+            "precision": 0.7627640227021251,
+            "recall": 0.6666666666666666,
+            "map50": 0.7794157142857142,
+            "map50_95": 0.2762215238095238
+          }
+        }
+      },
+      "box": {
+        "overall": {
+          "precision": 0.7560649982631222,
+          "recall": 0.5185185185185185,
+          "map50": 0.6255304761904761,
+          "map50_95": 0.3561613852813853
+        },
+        "per_class": {
+          "crack": {
+            "precision": 0.8393781779811536,
+            "recall": 0.5,
+            "map50": 0.6224999999999999,
+            "map50_95": 0.37424999999999997
+          },
+          "efflorescence": {
+            "precision": 0.793180131223109,
+            "recall": 0.5,
+            "map50": 0.6411999999999999,
+            "map50_95": 0.3864807272727272
+          },
+          "spall_detach": {
+            "precision": 0.6356366855851042,
+            "recall": 0.5555555555555556,
+            "map50": 0.6128914285714284,
+            "map50_95": 0.30775342857142857
+          }
+        }
+      }
+    },
+    "test": {
+      "images": 16,
+      "raw_instances_box_polygons_and_confidence_exact": true,
+      "ground_truth_and_image_label_hashes_exact": true,
+      "thresholds": {
+        "crack": 0.001,
+        "efflorescence": 0.01,
+        "spall_detach": 0.001
+      },
+      "macro_f1": 0.6692810457516339,
+      "mask": {
+        "overall": {
+          "precision": 0.7284282390979994,
+          "recall": 0.32222222222222224,
+          "map50": 0.44355280303322414,
+          "map50_95": 0.25093067884396303
+        },
+        "per_class": {
+          "crack": {
+            "precision": 0.5415409641162369,
+            "recall": 0.4,
+            "map50": 0.3856410256410256,
+            "map50_95": 0.21630769230769226
+          },
+          "efflorescence": {
+            "precision": 0.8285424044632603,
+            "recall": 0.16666666666666666,
+            "map50": 0.24866400000000002,
+            "map50_95": 0.19893120000000003
+          },
+          "spall_detach": {
+            "precision": 0.8152013487145009,
+            "recall": 0.4,
+            "map50": 0.6963533834586467,
+            "map50_95": 0.3375531442241969
+          }
+        }
+      },
+      "box": {
+        "overall": {
+          "precision": 0.7284282390979994,
+          "recall": 0.32222222222222224,
+          "map50": 0.4527454816995869,
+          "map50_95": 0.27500204934363887
+        },
+        "per_class": {
+          "crack": {
+            "precision": 0.5415409641162369,
+            "recall": 0.4,
+            "map50": 0.36518648018648014,
+            "map50_95": 0.2006850233100233
+          },
+          "efflorescence": {
+            "precision": 0.8285424044632603,
+            "recall": 0.16666666666666666,
+            "map50": 0.24866400000000002,
+            "map50_95": 0.2237976
+          },
+          "spall_detach": {
+            "precision": 0.8152013487145009,
+            "recall": 0.4,
+            "map50": 0.7443859649122807,
+            "map50_95": 0.40052352472089325
+          }
+        }
+      }
+    }
+  },
+  "scope": "Official predictions and class decisions reproduced with the distributed code and weights on the recorded GPU environment."
+}

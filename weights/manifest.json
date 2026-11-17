@@ -1,0 +1,14 @@
+{
+  "candidate_id": "frozenbn960_lr15e6_e30_epoch015_img1280",
+  "training_epoch": 15,
+  "inference_imgsz": 1280,
+  "source_sha256": "3291b82d29f33df0a8a4c3a141d35d7ed4900bcd116ebe892fde478ff0c25219",
+  "distribution_sha256": "2ac5db0b8ca60f166339eadcf511aad1c49aea91b9ad8ee9086af3db2dc8575e",
+  "distribution_file": "weights/selected.pt",
+  "state_tensor_count": 417,
+  "state_tensors_identical": true,
+  "class_mapping_identical": true,
+  "architecture_identical": true,
+  "metadata_paths": "relative",
+  "selection_sha256": "2cc437f7a7ba6ef422e866b3441c890ba9d89e9e276d1a56c1ffee0920e53d48"
+}

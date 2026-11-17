@@ -1,0 +1,39 @@
+{
+  "split_manifest_sha256": "15410276691ed560bc9fdaba65ba107b8f8834e69abbb96b0c9056f9e914f774",
+  "original_summary_sha256": "decfb39b9efcc1f4d3b7155516c9cb9449f3d7586d059fcb4bbc99ce1accf0e0",
+  "annotation_labels": {
+    "URT003_2021_01_16_001_1604.txt": "f23afefc1142538f2474460624f32984f3eb1e5c3207331b6fd20a179a94b8eb",
+    "URT006_2022_01_09_001_6092.txt": "4d135b3f27251d6c80dfd20e78691eb76b0aae346e43a7de9a7b83ad33f242c7",
+    "URT006_2022_04_06_001_5744.txt": "d99a7a6782955fad2a13ce3bf723b2a5871ceef0fd9c3eb6f8fa62df92a76f66",
+    "URT007_2022_01_01_001_5614.txt": "dc59d549f73980b399551ac3ad320bbaff7328fa3d621a2d254264c00f5b3d18",
+    "URT007_2022_01_03_001_13166.txt": "bb9d7e4e96c3b16b14e490191d8edd656ef5ea1b8e849db77c28e7b4f6b4b28f",
+    "URT007_2022_01_11_001_19176.txt": "2042004756049a0cd92a307212e23826900358e7e5aa90b57eada35d12a782b7",
+    "URT007_2022_01_13_001_32828.txt": "4168d703ecb161f93daa9590bcddf32fa44d0a4ac7cfb217f0e6227d13fc1b77",
+    "URT008_2022_01_07_001_6854.txt": "8bfd0f9be510bcf589e58aade908922d7d2d75be1900d001b78361817cf59f95",
+    "URT019_2022_02_09_001_8583.txt": "2226e5ec74c5807f584518fd80546466e314c42da66db142e7177eb7bcfdd145",
+    "URT019_2022_03_04_001_12076.txt": "b70530dd1e53946b86d4d4d422636ef350f73ae7e845c45a70be9e505fb5c38f"
+  },
+  "class_names": [
+    "crack",
+    "efflorescence",
+    "spall_detach"
+  ],
+  "included_images": 3117,
+  "class_instance_counts": {
+    "train": [
+      859,
+      1527,
+      2009
+    ],
+    "val": [
+      2,
+      6,
+      9
+    ],
+    "test": [
+      5,
+      6,
+      10
+    ]
+  }
+}

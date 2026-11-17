@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "command": "validate",
+  "split": "val",
+  "completed_at": "2026-11-12T18:47:08.310546+00:00",
+  "freeze": {
+    "config_sha256": "db74bda3dbbd8261e76e3b15648bf94d61ee417bc1d3460a06ca5025d4a229c6",
+    "weights_sha256": "3291b82d29f33df0a8a4c3a141d35d7ed4900bcd116ebe892fde478ff0c25219",
+    "split_manifest_sha256": "15410276691ed560bc9fdaba65ba107b8f8834e69abbb96b0c9056f9e914f774",
+    "dataset_fingerprint": "253b991de88f3c0d94e2745115b029cecbd06255eeb1e8b890ffcdb575b0f229"
+  },
+  "plan_sha256": "7abee4dccec67b7d4d9f8fc22d3b6abacc595a2f5b57fd5a3527a7c88ca4d736"
+}

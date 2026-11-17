@@ -1,0 +1,57 @@
+{
+  "candidate_id": "frozenbn960_lr15e6_e30_epoch015_img1280",
+  "split": "val",
+  "freeze": {
+    "config_sha256": "db74bda3dbbd8261e76e3b15648bf94d61ee417bc1d3460a06ca5025d4a229c6",
+    "weights_sha256": "3291b82d29f33df0a8a4c3a141d35d7ed4900bcd116ebe892fde478ff0c25219",
+    "split_manifest_sha256": "15410276691ed560bc9fdaba65ba107b8f8834e69abbb96b0c9056f9e914f774",
+    "dataset_fingerprint": "253b991de88f3c0d94e2745115b029cecbd06255eeb1e8b890ffcdb575b0f229"
+  },
+  "classes": [
+    {
+      "class": "crack",
+      "threshold": 0.001,
+      "TP": 1,
+      "FP": 0,
+      "FN": 1,
+      "TN": 12,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "class": "efflorescence",
+      "threshold": 0.01,
+      "TP": 4,
+      "FP": 0,
+      "FN": 1,
+      "TN": 9,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888
+    },
+    {
+      "class": "spall_detach",
+      "threshold": 0.001,
+      "TP": 7,
+      "FP": 0,
+      "FN": 0,
+      "TN": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "macro_f1": 0.8518518518518517,
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "allocator_fraction": 0.5,
+    "cpu_threads": 2,
+    "started_at": "2026-11-12T18:47:01.234570+00:00",
+    "allocator_limit_scope": "PyTorch allocator memory, not GPU compute occupancy"
+  },
+  "selected_thresholds_sha256": "ffc60d186bda29e8994d64f2e5ae91c8653e98e677ef9a6e60020ae0ca6dde61",
+  "segmentation_metrics_sha256": "fa32890367a87f5880bb0f1311eb4024ab8c3481a5cc0445ecc1572e523ba5c4"
+}

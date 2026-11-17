@@ -1,0 +1,17 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux-5.14.0-687.54.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "ultralytics": "8.4.12",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "opencv-python": "4.10.0.84",
+    "matplotlib": "3.10.8",
+    "reportlab": "4.4.10"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090, 615.71.09, 24564 MiB",
+  "cpu_max": "1200000 100000",
+  "memory_max": "68719476736"
+}

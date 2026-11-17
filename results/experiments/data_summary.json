@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "splits": [
+    {
+      "split": "train",
+      "images": 3087,
+      "origin_ids": 164,
+      "capture_groups": 76,
+      "plain": 126,
+      "rf_export": 38,
+      "augmented": 2923,
+      "manual_images": 6
+    },
+    {
+      "split": "val",
+      "images": 14,
+      "origin_ids": 14,
+      "capture_groups": 7,
+      "plain": 14,
+      "rf_export": 0,
+      "augmented": 0,
+      "manual_images": 3
+    },
+    {
+      "split": "test",
+      "images": 16,
+      "origin_ids": 16,
+      "capture_groups": 8,
+      "plain": 16,
+      "rf_export": 0,
+      "augmented": 0,
+      "manual_images": 1
+    }
+  ],
+  "train_classes": [
+    {
+      "class": "crack",
+      "origin_ids": 41,
+      "images": 563,
+      "instances": 859,
+      "images_per_origin": 13.731707317073171
+    },
+    {
+      "class": "efflorescence",
+      "origin_ids": 40,
+      "images": 690,
+      "instances": 1527,
+      "images_per_origin": 17.25
+    },
+    {
+      "class": "spall_detach",
+      "origin_ids": 83,
+      "images": 1834,
+      "instances": 2009,
+      "images_per_origin": 22.096385542168676
+    }
+  ],
+  "train_views": [
+    {
+      "view": "origin_cap1",
+      "train_images": 164,
+      "held_out_files_sha256": "c63d2e8520795eecfd814a67913543040305c70f4132db92aaa630e6407e09b9"
+    },
+    {
+      "view": "origin_cap4",
+      "train_images": 388,
+      "held_out_files_sha256": "c63d2e8520795eecfd814a67913543040305c70f4132db92aaa630e6407e09b9"
+    },
+    {
+      "view": "manual_augmented",
+      "train_images": 3225,
+      "held_out_files_sha256": "c63d2e8520795eecfd814a67913543040305c70f4132db92aaa630e6407e09b9"
+    }
+  ],
+  "source_images": 4116,
+  "included_images": 3117,
+  "excluded_by_reason": {
+    "excluded_eval_nonoriginal": 536,
+    "excluded_identical_pixels": 31,
+    "manual_annotation_derivative_not_regenerated": 369,
+    "excluded_invalid": 63
+  },
+  "original_group_definition": "촬영 접두부와 동일 픽셀 중복을 묶은 split_group",
+  "origin_definition": "원본 프레임 식별자(origin_id); 모든 ID에 plain 원본이 있는 것은 아님",
+  "train_origin_representatives": {
+    "plain": 126,
+    "rf_export_only": 37,
+    "augmented_only": 1
+  },
+  "assertions": {
+    "group_overlap": 0,
+    "origin_overlap": 0,
+    "heldout_nonplain": 0,
+    "heldout_files_same_across_training_views": true
+  }
+}

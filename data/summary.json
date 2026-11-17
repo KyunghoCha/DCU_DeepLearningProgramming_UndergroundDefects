@@ -1,0 +1,108 @@
+{
+  "seed": 42,
+  "source_images": 4116,
+  "source_labels": 4116,
+  "zero_byte_images": 63,
+  "invalid_files": 63,
+  "label_error_files": 0,
+  "decode_failed_images": 63,
+  "orphan_labels": [],
+  "filename_kinds": {
+    "rf_export": 43,
+    "plain": 157,
+    "augmented": 3916
+  },
+  "status_counts": {
+    "included": 3117,
+    "excluded_eval_nonoriginal": 536,
+    "excluded_identical_pixels": 31,
+    "manual_annotation_derivative_not_regenerated": 369,
+    "excluded_invalid": 63
+  },
+  "manual_annotations": 10,
+  "splits": {
+    "train": {
+      "images": 3087,
+      "groups": 76,
+      "origin_frames": 164,
+      "image_kinds": {
+        "rf_export": 38,
+        "plain": 126,
+        "augmented": 2923
+      },
+      "class_images": {
+        "crack": 563,
+        "spall_detach": 1834,
+        "efflorescence": 690
+      },
+      "class_instances": {
+        "crack": 859,
+        "spall_detach": 2009,
+        "efflorescence": 1527
+      },
+      "manual_images": 6
+    },
+    "val": {
+      "images": 14,
+      "groups": 7,
+      "origin_frames": 14,
+      "image_kinds": {
+        "plain": 14
+      },
+      "class_images": {
+        "efflorescence": 5,
+        "crack": 2,
+        "spall_detach": 7
+      },
+      "class_instances": {
+        "efflorescence": 6,
+        "crack": 2,
+        "spall_detach": 9
+      },
+      "manual_images": 3
+    },
+    "test": {
+      "images": 16,
+      "groups": 8,
+      "origin_frames": 16,
+      "image_kinds": {
+        "plain": 16
+      },
+      "class_images": {
+        "spall_detach": 8,
+        "crack": 4,
+        "efflorescence": 4
+      },
+      "class_instances": {
+        "spall_detach": 10,
+        "crack": 5,
+        "efflorescence": 6
+      },
+      "manual_images": 1
+    }
+  },
+  "assertions": {
+    "origin_id:train/val:overlap": 0,
+    "origin_id:train/test:overlap": 0,
+    "origin_id:val/test:overlap": 0,
+    "sequence_group:train/val:overlap": 0,
+    "sequence_group:train/test:overlap": 0,
+    "sequence_group:val/test:overlap": 0,
+    "split_group:train/val:overlap": 0,
+    "split_group:train/test:overlap": 0,
+    "split_group:val/test:overlap": 0,
+    "file_sha256:train/val:overlap": 0,
+    "file_sha256:train/test:overlap": 0,
+    "file_sha256:val/test:overlap": 0,
+    "pixel_sha256:train/val:overlap": 0,
+    "pixel_sha256:train/test:overlap": 0,
+    "pixel_sha256:val/test:overlap": 0,
+    "val_test_nonplain": 0,
+    "included_invalid_images_or_labels": 0,
+    "included_duplicate_pixels": 0,
+    "included_unregenerated_manual_derivatives": 0
+  },
+  "source_grouping": "Sequence prefix plus exact pixel duplicate unions; no image cache",
+  "output_images": "symlinks to original files",
+  "output_labels": "independent text copies"
+}

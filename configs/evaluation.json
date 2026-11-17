@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "classes": [
+    "crack",
+    "efflorescence",
+    "spall_detach"
+  ],
+  "baseline": {
+    "weights_sha256": "2ac5db0b8ca60f166339eadcf511aad1c49aea91b9ad8ee9086af3db2dc8575e",
+    "split_manifest_sha256": "15410276691ed560bc9fdaba65ba107b8f8834e69abbb96b0c9056f9e914f774",
+    "expected_counts": {
+      "train": 3087,
+      "val": 14,
+      "test": 16
+    }
+  },
+  "inference": {
+    "imgsz": 1280,
+    "batch": 1,
+    "device": "0",
+    "conf": 0.0001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "rect": true
+  },
+  "mask_validation": {
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "batch": 1,
+    "workers": 0,
+    "plots": true
+  },
+  "thresholds": [
+    0.001,
+    0.004,
+    0.01,
+    0.02,
+    0.06,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "tie_break": "lowest_threshold",
+  "seed": 42,
+  "ultralytics_version": "8.4.12"
+}

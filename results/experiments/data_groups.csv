@@ -1,0 +1,4 @@
+split,images,origin_ids,capture_groups,plain,rf_export,augmented,manual_images
+train,3087,164,76,126,38,2923,6
+val,14,14,7,14,0,0,3
+test,16,16,8,16,0,0,1
