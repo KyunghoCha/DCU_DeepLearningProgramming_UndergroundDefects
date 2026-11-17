@@ -17,7 +17,14 @@
 
 [실습 보고서 PDF](reports/Step3_3주차_실습과제_21114073_차경호.pdf) · [주석 기준서 PDF](reports/Step3_3주차_주석기준서_21114073_차경호.pdf) · [전체 실험 조건](results/experiments/training_runs.csv) · [검증 조건별 결과](results/validation_comparison.csv)
 
-![평가 절차](docs/images/pipeline.png)
+```mermaid
+flowchart LR
+    TRAIN["학습 3,087장<br/>후보 가중치 학습"]
+    VAL["검증 14장 · 90조건<br/>가중치·추론 크기·임계값 선택"]
+    FIX["선택 조건 고정<br/>가중치·설정·임계값 저장"]
+    TEST["테스트 16장<br/>Mask AP · 영상 단위 F1"]
+    TRAIN --> VAL --> FIX --> TEST
+```
 
 학습 자료로 가중치를 학습하고, 검증 자료로 가중치·추론 크기·클래스별 임계값을 선택한다. 테스트에는 선택한 조합을 고정해서 적용한다. 마스크 평가는 결함 영역의 일치도를, ON/OFF 평가는 결함이 있는 영상의 선별 능력을 측정한다.
 
@@ -138,7 +145,39 @@ Mosaic는 여러 영상을 하나로 합치고, MixUp은 서로 다른 영상을
 
 표의 선택 에폭은 각 학습 실행 내부의 선택 기준으로 고른 값이다. 이후 고정 간격으로 저장한 에폭도 공통 검증에 포함했으며, 최종 K의 15에폭 가중치는 이 공통 비교에서 선택했다.
 
-![추가 학습의 초기 가중치 관계](docs/images/experiment_lineage.png)
+```mermaid
+flowchart LR
+    COCO["COCO 사전학습<br/>YOLOv8s-Seg"]
+    BASE["기초 · 960 학습<br/>26에폭 가중치"]
+    A["A · 960 추가 학습"]
+    B["B · 1280 추가 학습<br/>7에폭 가중치"]
+    C["C · 원본당 최대 1장"]
+    D["D · 원본당 최대 4장"]
+    E["E · COCO 초기화<br/>원본당 최대 4장"]
+    F["F · 수동 주석 증강 138장"]
+    G["G · 전체 자료 · 960<br/>97에폭 가중치"]
+    H["H · 추가 미세조정"]
+    I["I · 클래스·원본 균등 추출"]
+    J["J · 온라인 증강 완화"]
+    K["K · BatchNorm 통계 고정"]
+    L["L · 분류 손실 가중치 1.0"]
+    M["M · 전체 자료 · 1280"]
+
+    COCO --> BASE
+    COCO --> E
+    COCO --> G
+    COCO --> M
+    BASE --> A
+    BASE --> B
+    BASE --> C
+    BASE --> D
+    B --> F
+    G --> H
+    G --> I
+    G --> J
+    G --> K
+    G --> L
+```
 
 화살표는 각 실험의 출발 가중치를 나타낸다. A–D는 2주차 모델에서, F는 B에서, H–L은 G에서 시작했다. E·G·M은 COCO 사전학습 모델에서 출발했다. 같은 부모를 가진 조건끼리 바뀐 설정과 결과를 비교하면 추가 학습의 효과를 구체적으로 읽을 수 있다.
 
